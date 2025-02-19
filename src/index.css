@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-neutral-950 text-white font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent bg-[length:200%] hover:bg-right transition-all duration-500;
+  }
+  
+  .card {
+    @apply relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/50 backdrop-blur-xl;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white 
+           bg-gradient-to-r from-primary to-secondary rounded-full
+           hover:from-primary/90 hover:to-secondary/90 
+           transform hover:-translate-y-0.5 transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-white 
+           border border-neutral-700 rounded-full bg-neutral-900/50
+           hover:bg-neutral-800 hover:border-neutral-600
+           transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply text-neutral-400 hover:text-white transition-colors duration-200;
+  }
+
+  .stat-card {
+    @apply flex flex-col items-center p-6 rounded-2xl bg-neutral-900/50 border border-neutral-800
+           hover:border-neutral-700 transition-colors duration-300;
+  }
+
+  .service-card {
+    @apply p-8 card hover:border-neutral-700 transition-all duration-300;
+  }
+
+  .portfolio-card {
+    @apply relative overflow-hidden rounded-2xl;
+  }
+
+  .testimonial-card {
+    @apply p-8 card;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-neutral-900 border border-neutral-800 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent
+           text-white placeholder-neutral-500;
+  }
+}
+
+.parallax-container {
+  perspective: 1000px;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

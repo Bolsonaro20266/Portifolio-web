@@ -87,7 +87,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white">
+    <div className="min-h-screen bg-neutral-950 text-white w-full" style={{backgroundColor: '#0A0A0F'}}>
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-lg border-b border-neutral-900">
         <div className="container mx-auto px-4">
